@@ -1,8 +1,8 @@
-======================================
- VCT Marvell riscv BSP Manifest
-======================================
+=============================
+ VCT riscv32/64 BSP Manifest
+=============================
 
-The various branches (other than this one) available here will configure the repo build
+The various branches available here will configure the repo build
 for the appropriate branches in each repository and clone them in the typical fashion,
 ie, with either poky or oe-core as the parent directory and the additional metadata
 layers underneath (as documented in the upstream setup).
@@ -14,8 +14,18 @@ See the riscv page on the `Gentoo wiki`_ for more info.
 
 .. _Gentoo wiki: https://wiki.gentoo.org/wiki/Project:RISC-V
 
-There are 3 main branches for each of the above choices: zeus, rocko, and master.
-Select the main build branch using the github branch button above, which will select the
+
+machine variants
+----------------
+
+TBD
+
+
+
+Build branches
+--------------
+
+Select the build branch using the github branch button above, which will select the
 correct manifest branches and BSP/metadata using the respective branches in this
 repo as shown below.
 
@@ -56,22 +66,22 @@ Download the BSP source
 At the end of the above commands you have all the metadata you need to start
 building with poky and meta-oe on dunfell branches.
 
-To start a simple image build for a riscv on qemu::
+To start a simple image build for a riscv v5 1GB DDR3 board::
 
   $ cd oe-core
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
-  $ ${EDITOR} conf/local.conf             # set MACHINE to qemuriscv32
+  $ ${EDITOR} conf/local.conf             # set MACHINE to riscv (mainline kernel) or riscv-v5 (vendor kernel)
   $ bitbake core-image-minimal
 
+
+
 You can use any directory (build-dir above) to host your build. The above
-commands will build an image for riscv using the riscv BSP machine config
-and the default yocto-linux kernel.
+commands will build an image for riscv using the riscv BSP
+machine config and the default yocto-linux kernel.
 
-For other boards, you can replace the default yocto kernel with a patched
-mainline kernel (note new boards will be added as this manifest evolves).
-
-The main source code is checked out in the bsp dir above, and the build output dir will default
-to oe-core/build-dir unless you choose a different path above.
+The main source code is checked out in the bsp dir above, and the build
+output dir will default to oe-core/build-dir unless you choose a different
+path above.
 
 Source code
 -----------
@@ -85,11 +95,11 @@ Using Development and Testing/Release Branches
 
 Replace the repo init command above with one of the following:
 
-For developers - zeus
+For developers - dunfell
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-zeus
+  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-dunfell
 
 For intrepid developers and testers - master
 

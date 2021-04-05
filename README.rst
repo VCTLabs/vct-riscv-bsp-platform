@@ -18,8 +18,12 @@ See the riscv page on the `Gentoo wiki`_ for more info.
 machine variants
 ----------------
 
-TBD
+Current machine variants in meta-riscv:
 
+* baremetal-riscv32
+* baremetal-riscv64
+* freedom-u540
+* qemuriscv32
 
 
 Build branches
@@ -66,13 +70,12 @@ Download the BSP source
 At the end of the above commands you have all the metadata you need to start
 building with poky and meta-oe on dunfell branches.
 
-To start a simple image build for a riscv v5 1GB DDR3 board::
+To start a simple image build for a riscv qemu target::
 
   $ cd oe-core
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
-  $ ${EDITOR} conf/local.conf             # set MACHINE to riscv (mainline kernel) or riscv-v5 (vendor kernel)
+  $ ${EDITOR} conf/local.conf             # set MACHINE to qemuriscv32 (see above)
   $ bitbake core-image-minimal
-
 
 
 You can use any directory (build-dir above) to host your build. The above

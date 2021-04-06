@@ -43,8 +43,9 @@ once you've run the ``repo init`` and ``repo sync`` commands.  Try::
   $ repo show
   $ repo status
 
-See the default.xml file for repo and branch details; the following example is generic
-so go back and select a branch from this repo.
+See the default.xml file for repo and branch details; if this is the 'main'
+branch, then the following example is generic so go back and select a build
+branch from this repo.
 
 Install the repo utility
 ------------------------
@@ -73,7 +74,7 @@ To start a simple image build for a riscv qemu target::
 
   $ cd oe-core
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
-  $ ${EDITOR} conf/local.conf             # set MACHINE to qemuriscv32 (see above)
+  $ ${EDITOR} conf/local.conf             # set MACHINE to <your_machine> (see above)
   $ bitbake core-image-minimal
 
 

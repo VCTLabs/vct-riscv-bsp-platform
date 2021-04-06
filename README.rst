@@ -18,12 +18,11 @@ See the riscv page on the `Gentoo wiki`_ for more info.
 machine variants
 ----------------
 
-Current machine variants in meta-riscv:
+Current machine variants on dunfell branch:
 
-* baremetal-riscv32
-* baremetal-riscv64
 * freedom-u540
 * qemuriscv32
+* qemuriscv64
 
 
 Build branches

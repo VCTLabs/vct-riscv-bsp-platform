@@ -18,7 +18,7 @@ See the riscv page on the `Gentoo wiki`_ for more info.
 machine variants
 ----------------
 
-Current machine variants on dunfell branch:
+Current machine variants on gatesgarth branch:
 
 * freedom-u540
 * qemuriscv32
@@ -43,9 +43,8 @@ once you've run the ``repo init`` and ``repo sync`` commands.  Try::
   $ repo show
   $ repo status
 
-See the default.xml file for repo and branch details; if this is the 'main'
-branch, then the following example is generic so go back and select a build
-branch from this repo.
+See the default.xml file for repo and branch details; the following example is generic
+so go back and select a branch from this repo.
 
 Install the repo utility
 ------------------------
@@ -64,17 +63,17 @@ Download the BSP source
   $ PATH=${PATH}:~/bin
   $ mkdir riscv-bsp
   $ cd riscv-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-riscv-bsp-platform -b oe-dunfell
+  $ repo init -u https://github.com/VCTLabs/vct-riscv-bsp-platform -b oe-gatesgarth
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
-building with poky and meta-oe on dunfell branches.
+building with poky and meta-oe on gatesgarth branches.
 
 To start a simple image build for a riscv qemu target::
 
   $ cd oe-core
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
-  $ ${EDITOR} conf/local.conf             # set MACHINE to <your_machine> (see above)
+  $ ${EDITOR} conf/local.conf             # set MACHINE to qemuriscv32 (see above)
   $ bitbake core-image-minimal
 
 
@@ -98,11 +97,11 @@ Using Development and Testing/Release Branches
 
 Replace the repo init command above with one of the following:
 
-For developers - dunfell
+For developers - gatesgarth
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-dunfell
+  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-gatesgarth
 
 For intrepid developers and testers - master
 

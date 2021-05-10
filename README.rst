@@ -10,16 +10,18 @@ layers underneath (as documented in the upstream setup).
 The main branches build either the poky reference distro or oe-core with your choice
 of distro.  Note that oe-core will build "distroless" by default, however, you can set
 DISTRO = "vctlabs" in your local.conf if you want the mainline kernel to be the default.
-See the riscv page on the `Gentoo wiki`_ for more info.
+See the riscv page on the `Gentoo wiki`_ and the `BeagleV`_ pages for more info.
 
 .. _Gentoo wiki: https://wiki.gentoo.org/wiki/Project:RISC-V
+.. _BeagleV: https://beagleboard.org/beaglev
 
 
 machine variants
 ----------------
 
-Current machine variants on gatesgarth branch:
+Current machine variants on master branch:
 
+* beaglev-starlight-jh7100
 * freedom-u540
 * qemuriscv32
 * qemuriscv64

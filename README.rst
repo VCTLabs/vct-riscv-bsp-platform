@@ -101,7 +101,7 @@ For developers - gatesgarth
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-gatesgarth
+  $ repo init -u https://github.com/VCTLabs/vct-riscv-bsp-platform -b oe-gatesgarth
 
 For intrepid developers and testers - master
 
@@ -112,6 +112,6 @@ breaks something that was working before.  Use with caution.
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b oe-master
+  $ repo init -u https://github.com/VCTLabs/vct-riscv-bsp-platform -b oe-master
 
 

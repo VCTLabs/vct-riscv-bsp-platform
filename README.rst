@@ -65,7 +65,7 @@ Download the BSP source
   $ PATH=${PATH}:~/bin
   $ mkdir riscv-bsp
   $ cd riscv-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-riscv-bsp-platform -b oe-gatesgarth
+  $ repo init -u https://github.com/VCTLabs/vct-riscv-bsp-platform -b oe-kirkstone
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
@@ -99,11 +99,11 @@ Using Development and Testing/Release Branches
 
 Replace the repo init command above with one of the following:
 
-For developers - gatesgarth
+For developers - kirkstone
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-riscv-bsp-platform -b oe-gatesgarth
+  $ repo init -u https://github.com/VCTLabs/vct-riscv-bsp-platform -b oe-kirkstone
 
 For intrepid developers and testers - master
 

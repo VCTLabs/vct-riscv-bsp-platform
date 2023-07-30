@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="oe-master"/>
+  <default sync-j="4" revision="oe-kirkstone"/>
 
   <remote fetch="https://github.com/openembedded" name="oe-core"/>
   <remote fetch="https://github.com/riscv" name="meta-riscv"/>
   <remote fetch="https://github.com/sarnold" name="sla"/>
   <remote fetch="https://github.com/VCTLabs" name="vct"/>
 
-  <project remote="oe-core" revision="master" name="openembedded-core" path="oe-core"/>
-  <project remote="oe-core" revision="master" name="meta-openembedded" path="oe-core/meta-openembedded"/>
-  <project remote="oe-core" revision="master" name="bitbake" path="oe-core/bitbake"/>
+  <project remote="oe-core" revision="kirkstone" name="openembedded-core" path="oe-core"/>
+  <project remote="oe-core" revision="kirkstone" name="meta-openembedded" path="oe-core/meta-openembedded"/>
+  <project remote="oe-core" revision="2.0" name="bitbake" path="oe-core/bitbake"/>
 
-  <project remote="meta-riscv" revision="master" name="meta-riscv" path="oe-core/meta-riscv"/>
-  <project remote="sla" revision="master" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
+  <project remote="meta-riscv" revision="kirkstone" name="meta-riscv" path="oe-core/meta-riscv"/>
+  <project remote="sla" revision="kirkstone" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
+  <project remote="vct" revision="kirkstone" name="meta-lxde" path="oe-core/meta-lxde"/>
 
 </manifest>
 

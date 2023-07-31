@@ -69,7 +69,41 @@ Download the BSP source
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
-building with poky and meta-oe on gatesgarth branches.
+building with poky and meta-oe on kirkstone branches.
+
+Update existing workspace
+-------------------------
+
+In order to bring all the repositories up to date with upstream::
+
+  $ cd poky
+  $ repo sync
+
+If you have local changes, you might also need::
+
+  $ repo rebase
+
+Repo tips
+---------
+
+Some info on how to customize your sync:
+
+  | ``-j JOBS, --jobs=JOBS``  projects to fetch simultaneously (default 4)
+  | ``--no-clone-bundle``     disable use of /clone.bundle on HTTP/HTTPS
+  | ``--no-tags``             don't fetch tags
+
+Fastest full sync::
+
+  $ repo sync --no-tags --no-clone-bundle
+
+Smallest/fastest sync::
+
+  $ repo init -u https://github.com/VCTLabs/vct-clonepi-bsp-platform -b poky-dunfell --no-clone-bundle --depth=1
+  $ repo sync --no-tags --no-clone-bundle --current-branch
+
+
+Image build
+-----------
 
 To start a simple image build for a riscv qemu target::
 
